@@ -1,0 +1,15 @@
+{
+    "ros.distro": "noetic",
+    "python.autoComplete.extraPaths": [
+        "/home/yqx/path_planning_project/ego-planner/devel/lib/python3/dist-packages",
+        "/home/yqx/ros/Turtlebot3/devel/lib/python3/dist-packages",
+        "/home/yqx/Common_algorithms/ga_package/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/yqx/path_planning_project/ego-planner/devel/lib/python3/dist-packages",
+        "/home/yqx/ros/Turtlebot3/devel/lib/python3/dist-packages",
+        "/home/yqx/Common_algorithms/ga_package/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

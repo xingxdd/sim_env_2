@@ -437,7 +437,11 @@ void pubSensedPoints()
             // dynamic_count=dyn_cld.update(delta_time);
             // dyn_cld.update(delta_time);
         }
+<<<<<<< HEAD
     dynamic_number=_dyn_cylinders.size();
+=======
+        dynamic_number=_dyn_cylinders.size();
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
         // ROS_INFO("动态障碍物的个数: %d", dynamic_number);
   ///////////////////////////// end   1 ///////////////////////////////////////
     // ROS_INFO("动态障碍额1的坐标: %f", matrix[0][0]);
@@ -446,25 +450,42 @@ void pubSensedPoints()
     // ROS_INFO("动态障碍额2的坐标: %f", matrix[1][1]);
     cloud_all += dyn_cld._cloud;
 
+<<<<<<< HEAD
 
+=======
+    // publish cylinder markerss
+    geometry_msgs::Pose obs_pose;
+    obs_pose.position.x = dyn_cld.x;
+    obs_pose.position.y = dyn_cld.y;
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
     // ROS_INFO("点云坐标x: %f", dynamic_count.x());
     // ROS_INFO("点云坐标y: %f", dynamic_count.y());
     matrix[i][0]=dynamic_count.x();
     matrix[i][1]=dynamic_count.y();
 
+<<<<<<< HEAD
     
     // publish cylinder markerss
     geometry_msgs::Pose obs_pose;
     obs_pose.position.x = dynamic_count.x();
     obs_pose.position.y = dynamic_count.y();
 
+=======
+    /////////////////////////////////////////////////////////////
+    // all_x=obs_pose.position.x;
+    // all_y=obs_pose.position.y;
+    /////////////////////////////////////////////////////////////
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
 
     // ROS_INFO("11坐标x: %f", dyn_cld.x);
     // ROS_INFO("11坐标y: %f", dyn_cld.y);
     obs_pose.position.z = 0.2 * dyn_cld.h;
     double yaw = std::atan2(dyn_cld._set_vy, dyn_cld._set_vx);
+<<<<<<< HEAD
     ROS_INFO("%d的yaw的数值:%f",i, yaw);
 
+=======
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
     obs_pose.orientation.x = 0.0; // 无俯仰角和翻滚角
     obs_pose.orientation.y = 0.0;
     obs_pose.orientation.z = std::sin(yaw / 2.0);
@@ -472,8 +493,13 @@ void pubSensedPoints()
     obstacle_array.poses.push_back(obs_pose);
 
     geometry_msgs::Pose pose;
+<<<<<<< HEAD
     pose.position.x    = dynamic_count.x();
     pose.position.y    = dynamic_count.y();
+=======
+    pose.position.x    = dyn_cld.x;
+    pose.position.y    = dyn_cld.y;
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
     pose.position.z    = 0.5 * dyn_cld.h;
     pose.orientation.w = 1.0;
 
@@ -483,6 +509,7 @@ void pubSensedPoints()
     cylinders_vis.markers.push_back(cylinder_mk);
     cylinder_mk.id += 1;
 
+<<<<<<< HEAD
 
 /**
  * 更新了箭头的方向和长度
@@ -511,6 +538,22 @@ void pubSensedPoints()
 
     // obstacle_state.header.stamp = ros::Time::now();
 
+=======
+    obstacle_state.pose               = pose;
+    obstacle_state.pose.position.x    = dyn_cld.x;
+    obstacle_state.pose.position.y    = dyn_cld.y;
+    obstacle_state.pose.position.z    = 0.5 * dyn_cld.h;
+    obstacle_state.pose.orientation.w = 1.0;
+    obstacle_state.points.clear();
+    geometry_msgs::Point pts;
+    pts.x = pose.position.x;
+    pts.y = pose.position.y;
+    pts.z = pose.position.z;
+    obstacle_state.points.push_back(pts);
+    pts.x += dyn_cld.vx * _sense_rate;
+    pts.y += dyn_cld.vy * _sense_rate;
+    obstacle_state.points.push_back(pts);
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
     obstacle_state.scale.x = dyn_cld.w;
     obstacle_state.scale.y = dyn_cld.w;
     obstacle_state.type    = visualization_msgs::Marker::ARROW;
@@ -826,8 +869,16 @@ int main(int argc, char** argv) {
     {
          abc = 6; // 设置默认值
          ROS_INFO("ObstacleShape/abc is set to %d", abc);
+<<<<<<< HEAD
     }
     ROS_INFO("ObstacleShape/abc is set to %d", abc);
+=======
+
+        
+    }
+
+      ROS_INFO("ObstacleShape/abc is set to %d", abc);
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
 ////////////////////////////test end  ////////////////////////////////////////////////////////////////
 
   /**

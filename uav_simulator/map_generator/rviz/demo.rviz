@@ -54,7 +54,11 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
+<<<<<<< HEAD
         Max Value: 6.990663528442383
+=======
+        Max Value: 6.9414753913879395
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
         Min Value: -0.28999999165534973
         Value: true
       Axis: Z
@@ -124,7 +128,11 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
+<<<<<<< HEAD
       Distance: 52.468448638916016
+=======
+      Distance: 37.346004486083984
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -132,17 +140,29 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
+<<<<<<< HEAD
         X: -1.2236915826797485
         Y: -1.4547995328903198
         Z: -1.4830971956253052
+=======
+        X: 0.5196611285209656
+        Y: -0.3439551889896393
+        Z: 0.06867873668670654
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
+<<<<<<< HEAD
       Pitch: 1.3347965478897095
       Target Frame: <Fixed Frame>
       Yaw: 4.78358268737793
+=======
+      Pitch: 1.4447964429855347
+      Target Frame: <Fixed Frame>
+      Yaw: 3.0835750102996826
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
     Saved: ~
 Window Geometry:
   Displays:

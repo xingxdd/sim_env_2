@@ -9,6 +9,12 @@
     <arg name="map_mode" default="0" /> <!-- 0: pure, 1: mixed -->
     <arg name="abc" default="2" />  <!-- test -->
 
+<<<<<<< HEAD
+=======
+    
+    
+
+>>>>>>> c8a85930ef38c3265ce555c7747472aa1432b9d2
 	<!-- map -->
 <!-- map -->
 <!-- <node pkg="map_generator" name="coordinate_talker" type="talker" /> -->
